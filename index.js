@@ -8,8 +8,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(router)
 router.get('/teste', (req, res, next) => {
-    res.status(200).send({ Mensagem: 'alou' })
+    res.status(200).send({ Mensagem: 'exec' })
 })
 router.get('/personagem/:name', characterController.getCharactersByName)
 
-app.listen(3000, () => console.log('api funfou'))
+app.listen(3000, () => console.log('api rodando'))

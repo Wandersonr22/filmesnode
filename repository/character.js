@@ -1,9 +1,8 @@
 const marvelClient = require('../services/marvel')
 
-const getCharactersByName = name =>
+const getCharactersByName = async name =>
     marvelClient.characters.findNameStartsWith(name)
         .then(res => res.data)
-        .fail(err => console.log(err))
-        .done()
+        .catch(err => console.log(err))
 
 module.exports = { getCharactersByName }
